@@ -195,6 +195,7 @@ macro_rules! hal {
 
 use crate::gpio::{gpioa::*, gpiob::*, gpioc::*, gpioe::*};
 #[cfg(any(
+    feature = "stm32l4x1",
     feature = "stm32l4x3",
     feature = "stm32l4x5",
     feature = "stm32l4x6",
@@ -278,6 +279,7 @@ pins!(SPI3, AF6,
     MOSI: [PG11]);
 
 #[cfg(any(
+    feature = "stm32l4x1",
     feature = "stm32l4x3",
     feature = "stm32l4x5",
     feature = "stm32l4x6",
@@ -285,6 +287,7 @@ pins!(SPI3, AF6,
 use crate::stm32::SPI2;
 
 #[cfg(any(
+    feature = "stm32l4x1",
     feature = "stm32l4x3",
     feature = "stm32l4x5",
     feature = "stm32l4x6",
@@ -294,6 +297,7 @@ hal! {
 }
 
 #[cfg(any(
+    feature = "stm32l4x1",
     feature = "stm32l4x3",
     feature = "stm32l4x5",
     feature = "stm32l4x6",
